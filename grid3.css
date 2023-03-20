@@ -9,9 +9,13 @@ main{
     background-color: rgb(160, 215, 237);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 100px 500px 100px;
-
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15vw 70vw 15vw;
+    grid-template-areas: 
+    "m h h" 
+    "m c c"
+    "m f f";
+    grid-gap: 10px;
 }
 
 header, nav, article, footer {
@@ -24,23 +28,17 @@ header, nav, article, footer {
 }
 header{
     background-color: rgb(134, 134, 243);
-    grid-column-start: 1;
-    grid-column-end: -1;
+    grid-area: h;
 }
 nav{
     background-color: lightskyblue;
-    grid-column-start: 9;
-    grid-column-end: 13;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-area: m;
 }
 article{
     background-color: aquamarine;
-    grid-column-start: 1;
-    grid-column-end: 9;
+    grid-area: c;
 }
 footer{
     background-color: violet;
-    grid-column-start: 1;
-    grid-column-end: -1;
+    grid-area: f ;
 }
